@@ -5,3 +5,11 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.Home__header {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    padding-bottom: 20px;
+}

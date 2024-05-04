@@ -58,11 +58,25 @@
   color: #4943da;
   font-weight: 300;
 }
-.jobCard .jobCard__flex .jobCard__experienceLabel {
+.jobCard .jobCard__flex .jobCard__experienceFlex {
+  height: 50px;
+}
+.jobCard .jobCard__flex .jobCard__experienceFlex .jobCard__experienceLabel {
   margin: 10px;
   margin-top: 0px;
 }
-.jobCard .jobCard__flex .jobCard__experience {
+.jobCard .jobCard__flex .jobCard__experienceFlex .jobCard__experience {
   margin: 10px;
   margin-top: 0px;
+}
+.jobCard .jobCard__flex .jobCard__easyApply {
+  width: 320px;
+  height: 44px;
+  background-color: rgb(85, 239, 196);
+  border-style: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.jobCard .jobCard__flex .jobCard__easyApply:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=JobCard.css.map */

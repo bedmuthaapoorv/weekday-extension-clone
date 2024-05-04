@@ -114,12 +114,14 @@ export default function Home() {
     console.log(filterConfigs)
     return (
         <div className='lexend'>
-            <Utilities.Header jobsCount={jobsCount}></Utilities.Header>
-            <Utilities.Filters
-                filterConfigs={filterConfigs}
-                setFilterConfigs={setFilterConfigs}
-                options={options}
-            ></Utilities.Filters>
+            <div className='Home__header'>
+                <Utilities.Header jobsCount={jobsCount}></Utilities.Header>
+                <Utilities.Filters
+                    filterConfigs={filterConfigs}
+                    setFilterConfigs={setFilterConfigs}
+                    options={options}
+                ></Utilities.Filters>
+            </div>
             <Utilities.JobCards
                 jobCards={jobCards}
                 setLimit={setLimit}

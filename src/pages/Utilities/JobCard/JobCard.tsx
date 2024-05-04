@@ -22,14 +22,16 @@ export default function JobCard(props: any) {
                 <div className='jobCard__aboutCompanyLabel'>About Company</div>
                 <div className='jobCard__aboutCompany'>{props.jobDetailsFromCompany}</div>
                 <div className='jobCard__viewJob'>View job</div>
-                <div className='jobCard__experienceLabel'>
-                    Minimum Experience
+
+                <div className='jobCard__experienceFlex'>
+                    <div className='jobCard__experienceLabel'>
+                        {props.minExp ? "Minimum Experience" : ""}
+                    </div>
+                    <div className='jobCard__experience'>
+                        {props.minExp ? props.minExp + " years" : ""}
+                    </div>
                 </div>
-                <div className='jobCard__experience'>
-                    {props.minExp} years
-                </div>
-                <a href={props.jdLink}><button>Easy Apply</button></a>
-                <button>Unlock referrel asks</button>
+                <a><button className='jobCard__easyApply lexend'>Easy Apply</button></a>
             </div>
         </div>
     )
