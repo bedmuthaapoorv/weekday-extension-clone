@@ -3,6 +3,7 @@ import Select from 'react-select';
 import AsyncSelect from 'react-select/async';
 import makeAnimated from 'react-select/animated';
 import { useState } from 'react';
+import './Filter.css'
 export default function Filter(props: any) {
     //console.log(props)
     let optionsArray = props.options[props.title]

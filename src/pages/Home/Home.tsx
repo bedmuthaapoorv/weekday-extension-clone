@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Utilities from '../Utilities/Utilities'
 import { useState } from 'react'
 import services from '../../services/services'
+import './Home.css'
 export default function Home() {
     let [jobCards, setJobsCards] = useState<Array<any>>([])
     let [limit, setLimit] = useState<Number>(10);
@@ -9,6 +10,7 @@ export default function Home() {
     let [roleArray, setRoleArray] = useState<Array<any>>([])
     let [locationArray, setLocationArray] = useState<Array<any>>([])
     let [companyArray, setCompanyArray] = useState<Array<any>>([])
+    let [jobsCount, setJobsCount] = useState<Number>(0)
     let [filterConfigs, setFilterConfigs] = useState<any>({
         'Min experience': null,
         'Location': null,
@@ -55,7 +57,8 @@ export default function Home() {
     useEffect(() => {
         services.fetchJobsData(limit, offset).then(
             (res) => {
-                setJobsCards(res)
+                setJobsCards(res['jdList'])
+                setJobsCount(res['totalCount'])
             }
         )
     }, [limit, offset])
@@ -81,10 +84,9 @@ export default function Home() {
     useEffect(() => {
         setOptions({ ...options, 'Role': roleArray, 'Location': locationArray, 'Company': companyArray })
     }, [roleArray, locationArray, companyArray])
-    // console.log(roleArray)
     return (
-        <div>
-            <Utilities.Header></Utilities.Header>
+        <div className='lexend'>
+            <Utilities.Header jobsCount={jobsCount}></Utilities.Header>
             <Utilities.Filters
                 filterConfigs={filterConfigs}
                 setFilterConfigs={setFilterConfigs}

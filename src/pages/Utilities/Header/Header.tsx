@@ -1,8 +1,12 @@
 import React from 'react'
-export default function Header() {
+import './Header.css'
+export default function Header(props: any) {
     return (
-        <div>
+        <div className='Header'>
             Search Jobs
+            <div className='Header__jobsCount'>
+                {props.jobsCount}
+            </div>
         </div>
     )
 }
