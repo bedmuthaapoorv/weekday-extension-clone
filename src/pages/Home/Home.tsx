@@ -35,33 +35,60 @@ export default function Home() {
         'Location': [],
         'Remote/on-site': [
             { value: 'Remote', label: 'Remote' },
-            { value: 'Hybrid', label: 'Hybrid' },
             { value: 'In-office', label: 'In-office' }
         ],
         'Company': [],
         'Role': [],
         'Min base pay': [
-            { value: '0L', label: '0L' },
-            { value: '1L', label: '1L' },
-            { value: '2L', label: '2L' },
-            { value: '3L', label: '3L' },
-            { value: '4L', label: '4L' },
-            { value: '5L', label: '5L' },
-            { value: '6L', label: '6L' },
-            { value: '7L', label: '7L' },
-            { value: '8L', label: '8L' },
-            { value: '9L', label: '9L' },
-            { value: '10L', label: '10L' }
+            { value: '0', label: '0L' },
+            { value: '1', label: '1L' },
+            { value: '2', label: '2L' },
+            { value: '3', label: '3L' },
+            { value: '4', label: '4L' },
+            { value: '5', label: '5L' },
+            { value: '6', label: '6L' },
+            { value: '7', label: '7L' },
+            { value: '8', label: '8L' },
+            { value: '9', label: '9L' },
+            { value: '10', label: '10L' }
         ]
     })
     useEffect(() => {
         services.fetchJobsData(limit, offset).then(
             (res) => {
-                setJobsCards(res['jdList'])
+                let jobs = res['jdList']
+                jobs.map((jobCard: any) => {
+                    jobCard['visibility'] = true
+                    jobs.push(jobCard)
+                })
+                setJobsCards(jobs)
                 setJobsCount(res['totalCount'])
             }
         )
     }, [limit, offset])
+    useEffect(() => {
+        console.log('filters changed')
+        let jobs: Array<any> = []
+        jobCards.map((jobCard) => {
+            if (
+                (filterConfigs['Min experience'] ? jobCard['minExp'] >= filterConfigs['Min experience'] : true) &&
+                (filterConfigs['Location'] ? jobCard['location'] == filterConfigs['Location'] : true) &&
+                (filterConfigs['Remote/on-site'] ? (filterConfigs['Remote/on-site'].toLowerCase() == 'remote' ? jobCard['location'].toLowerCase() == 'remote' : jobCard['location'].toLowerCase() != 'remote') : true) &&
+                (filterConfigs['Company'] ? jobCard['companyName'] == filterConfigs['Company'] : true) &&
+                (filterConfigs['Role'] ? jobCard['jobRole'] == filterConfigs['Role'] : true) &&
+                (filterConfigs['Min base pay'] ? jobCard['minJdSalary'] >= filterConfigs['Min base pay'] : true)
+            ) {
+                jobCard['visibility'] = true
+                jobs.push(jobCard)
+            } else {
+                jobCard['visibility'] = false
+                jobs.push(jobCard)
+            }
+        })
+        setJobsCards(jobs)
+    }, [filterConfigs])
+    // console.log(filterConfigs)
+    // console.log(jobCards)
     useEffect(() => {
         let roles = new Set<String>()
         let locations = new Set<String>()
@@ -84,6 +111,7 @@ export default function Home() {
     useEffect(() => {
         setOptions({ ...options, 'Role': roleArray, 'Location': locationArray, 'Company': companyArray })
     }, [roleArray, locationArray, companyArray])
+    console.log(filterConfigs)
     return (
         <div className='lexend'>
             <Utilities.Header jobsCount={jobsCount}></Utilities.Header>

@@ -6,8 +6,8 @@ export default function JobCards(props: any) {
         <div className='jobCards'>
             <div className='jobCards__flex'>
                 {
-                    props.jobCards.map((jobCard: any) => {
-                        return <Utilities.JobCard {...jobCard}></Utilities.JobCard>
+                    props.jobCards.map((jobCard: any, index: Number) => {
+                        return <Utilities.JobCard {...jobCard} index={index}></Utilities.JobCard>
                     })
                 }
             </div>

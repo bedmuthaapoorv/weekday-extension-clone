@@ -12,6 +12,8 @@ export default function Filters(props: any) {
                             title={filter}
                             index={index}
                             options={props.options}
+                            filterConfigs={props.filterConfigs}
+                            setFilterConfigs={props.setFilterConfigs}
                         />
                     })
                 }

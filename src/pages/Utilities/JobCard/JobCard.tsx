@@ -1,8 +1,13 @@
 import React from 'react'
 import './JobCard.css'
 export default function JobCard(props: any) {
+    console.log(props.visibility)
     return (
-        <div className='jobCard'>
+        <div className='jobCard' key={props.index} style={
+            {
+                display: props.visibility ? "inherit" : "none"
+            }
+        }>
             <div className='jobCard__flex'>
                 <div className='jobCard__companyDetails'>
                     <img src={props.logoUrl} className='companyDetails__logo'></img>
