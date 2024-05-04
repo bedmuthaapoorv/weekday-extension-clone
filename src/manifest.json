@@ -6,8 +6,12 @@
   "background": {
     "service_worker": "background.bundle.js"
   },
+  "permissions": [
+    "tabs",
+    "background",
+    "activeTab"
+  ],
   "action": {
-    "default_popup": "popup.html",
     "default_icon": "icon-34.png"
   },
   "icons": {
