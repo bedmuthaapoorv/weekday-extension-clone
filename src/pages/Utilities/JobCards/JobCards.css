@@ -1,0 +1,13 @@
+.jobCards {
+  width: 100vw;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jobCards .jobCards__flex {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=JobCards.css.map */
