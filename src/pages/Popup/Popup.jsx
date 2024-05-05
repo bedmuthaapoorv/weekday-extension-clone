@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Popup.css';
-import services from '../../services/services'
 import { Router } from 'react-chrome-extension-router';
 import pages from '../pages'
+// Entry file
 const Popup = () => {
   return (
     <div>
