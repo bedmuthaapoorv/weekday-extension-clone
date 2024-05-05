@@ -1,8 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Weekday Clone",
-  "description": "SUbmission for SDE - 1 role",
-  "options_page": "options.html",
+  "name": "Weekday Clone by Apoorv Bedmutha",
+  "description": "Submission for SDE - 1 role",
   "background": {
     "service_worker": "background.bundle.js"
   },

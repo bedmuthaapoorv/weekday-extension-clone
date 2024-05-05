@@ -6787,7 +6787,7 @@ if (false) {} else {
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-chrome.devtools.panels.create('Dev Tools from chrome-extension-boilerplate-react', 'icon-34.png', 'panel.html');
+chrome.devtools.panels.create('Weekday Extension Clone from Apoorv Bedmutha', 'icon-34.png');
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -16803,7 +16803,7 @@ module.exports = getWDSMetadata;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("3f98014ae132a1a63603")
+/******/ 		__webpack_require__.h = () => ("ffb0befed54b04832ec1")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
