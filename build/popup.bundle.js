@@ -49238,8 +49238,19 @@ function Home() {
         _services_services__WEBPACK_IMPORTED_MODULE_2__["default"].fetchJobsData(limit, offset).then(function (res) {
             var jobs = res['jdList'];
             jobs.map(function (jobCard) {
-                jobCard['visibility'] = true;
-                jobs.push(jobCard);
+                if ((filterConfigs['Min experience'] ? jobCard['minExp'] >= filterConfigs['Min experience'] : true) &&
+                    (filterConfigs['Location'] ? jobCard['location'] == filterConfigs['Location'] : true) &&
+                    (filterConfigs['Remote/on-site'] ? (filterConfigs['Remote/on-site'].toLowerCase() == 'remote' ? jobCard['location'].toLowerCase() == 'remote' : jobCard['location'].toLowerCase() != 'remote') : true) &&
+                    (filterConfigs['Company'] ? jobCard['companyName'] == filterConfigs['Company'] : true) &&
+                    (filterConfigs['Role'] ? jobCard['jobRole'] == filterConfigs['Role'] : true) &&
+                    (filterConfigs['Min base pay'] ? jobCard['minJdSalary'] >= filterConfigs['Min base pay'] : true)) {
+                    jobCard['visibility'] = true;
+                    jobs.push(jobCard);
+                }
+                else {
+                    jobCard['visibility'] = false;
+                    jobs.push(jobCard);
+                }
             });
             setJobsCards(__spreadArray(__spreadArray([], jobCards, true), jobs, true));
             setJobsCount(res['totalCount']);
@@ -64061,7 +64072,7 @@ function combine (array, callback) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("bba05b580fbf71559f97")
+/******/ 		__webpack_require__.h = () => ("3f98014ae132a1a63603")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
