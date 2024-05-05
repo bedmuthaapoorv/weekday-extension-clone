@@ -2,7 +2,7 @@ import React from 'react'
 import Select from 'react-select';
 import { useState } from 'react';
 import './Filter.css'
-// Dropdown Filter
+// Dropdown Filter Components
 export default function Filter(props: any) {
     // get availaible options for the filter
     let optionsArray = props.options[props.title]

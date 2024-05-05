@@ -1,6 +1,7 @@
 import React from 'react'
 import Utilities from '../Utilities'
 import './Filters.css'
+// For populating the UI with different filters
 export default function Filters(props: any) {
     // extracting filter names from filterConfigs in order to create a filter for each filter name
     let filterConfigs = Object.keys(props.filterConfigs)

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+// Header UI which also shows the total jobs availaible on the platform
 export default function Header(props: any) {
     return (
         <div className='Header__container'>
