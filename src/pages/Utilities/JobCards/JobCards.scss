@@ -5,10 +5,17 @@
     align-items: center;
     justify-content: center;
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
     .jobCards__flex {
         display: flex;
         width: 90vw;
+        padding: 10px;
         justify-content: space-between;
         flex-wrap: wrap;
+        overflow-y: scroll;
+        height: 80vh;
     }
 }

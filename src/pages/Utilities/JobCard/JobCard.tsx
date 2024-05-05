@@ -1,7 +1,7 @@
 import React from 'react'
 import './JobCard.css'
 export default function JobCard(props: any) {
-    console.log(props.visibility)
+    // console.log(props.visibility)
     return (
         <div className='jobCard' key={props.index} style={
             {

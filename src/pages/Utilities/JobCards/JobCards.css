@@ -5,9 +5,15 @@
   align-items: center;
   justify-content: center;
 }
+.jobCards ::-webkit-scrollbar {
+  display: none;
+}
 .jobCards .jobCards__flex {
   display: flex;
   width: 90vw;
+  padding: 10px;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 80vh;
 }/*# sourceMappingURL=JobCards.css.map */

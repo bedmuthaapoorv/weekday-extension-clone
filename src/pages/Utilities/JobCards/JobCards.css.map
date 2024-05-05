@@ -1,1 +1,1 @@
-{"version":3,"sources":["JobCards.scss","JobCards.css"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACCJ;ADCI;EACI,aAAA;EACA,WAAA;EACA,8BAAA;EACA,eAAA;ACCR","file":"JobCards.css"}
+{"version":3,"sources":["JobCards.scss","JobCards.css"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACCJ;ADCI;EACI,aAAA;ACCR;ADEI;EACI,aAAA;EACA,WAAA;EACA,aAAA;EACA,8BAAA;EACA,eAAA;EACA,kBAAA;EACA,YAAA;ACAR","file":"JobCards.css"}

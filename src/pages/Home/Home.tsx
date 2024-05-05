@@ -61,13 +61,12 @@ export default function Home() {
                     jobCard['visibility'] = true
                     jobs.push(jobCard)
                 })
-                setJobsCards(jobs)
+                setJobsCards([...jobCards, ...jobs])
                 setJobsCount(res['totalCount'])
             }
         )
     }, [limit, offset])
     useEffect(() => {
-        console.log('filters changed')
         let jobs: Array<any> = []
         jobCards.map((jobCard) => {
             if (
@@ -87,8 +86,6 @@ export default function Home() {
         })
         setJobsCards(jobs)
     }, [filterConfigs])
-    // console.log(filterConfigs)
-    // console.log(jobCards)
     useEffect(() => {
         let roles = new Set<String>()
         let locations = new Set<String>()
@@ -111,7 +108,6 @@ export default function Home() {
     useEffect(() => {
         setOptions({ ...options, 'Role': roleArray, 'Location': locationArray, 'Company': companyArray })
     }, [roleArray, locationArray, companyArray])
-    console.log(filterConfigs)
     return (
         <div className='lexend'>
             <div className='Home__header'>
