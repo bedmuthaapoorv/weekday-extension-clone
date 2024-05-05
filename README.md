@@ -1,5 +1,7 @@
 # Weekday Extension Clone
 
+https://github.com/bedmuthaapoorv/weekday-extension-clone/assets/40523798/4158d874-1b77-4a97-a8d1-cfd6168d8495
+
 ## Author:
 - Apoorv Bedmuth
 - Email: bedmuthaapoorv@gmail.com
