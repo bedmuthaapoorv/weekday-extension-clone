@@ -1,3 +1,4 @@
+// to keep all default values for filters in one place
 const config = {
     'filterConfigs': {
         'Min experience': null,

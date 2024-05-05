@@ -1,3 +1,4 @@
+// change visibility of jobs based on the updated filters 
 export default function onFilterUpdate(jobCards: Array<any>, filterConfigs: any, setJobsCards: any) {
     let jobs: Array<any> = []
     jobCards.map((jobCard) => {

@@ -1,4 +1,5 @@
 import services from "./services"
+// add an extra visibility field to newly added jobs data fetched based on existing filters
 export default function populateJobsData(limit: Number, offset: Number, filterConfigs: any, jobCards: Array<any>, setJobsCards: any, setJobsCount: any) {
     services.fetchJobsData(limit, offset).then(
         (res) => {

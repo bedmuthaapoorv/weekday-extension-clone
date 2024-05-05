@@ -1,3 +1,4 @@
+// Calculate possible options for each filter based on jobs data
 export default function populateFilterOptions(jobCards: Array<any>, setRoleArray: any, setLocationArray: any, setCompanyArray: any) {
     let roles = new Set<String>()
     let locations = new Set<String>()
