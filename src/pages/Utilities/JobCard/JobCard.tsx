@@ -1,9 +1,10 @@
 import React from 'react'
 import './JobCard.css'
+// Card UI showing all different Job Details 
 export default function JobCard(props: any) {
-    // console.log(props.visibility)
     return (
         <div className='jobCard' key={props.index} style={
+            /*Only show card if visibility is true*/
             {
                 display: props.visibility ? "inherit" : "none"
             }
