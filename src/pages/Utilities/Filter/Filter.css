@@ -1,3 +1,5 @@
 .Filter .Filter__dropdown {
   width: 14vw;
+  min-width: 145px;
+  margin-top: 10px;
 }/*# sourceMappingURL=Filter.css.map */

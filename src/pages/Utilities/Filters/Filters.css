@@ -8,4 +8,5 @@
   display: flex;
   width: 90vw;
   justify-content: space-around;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=Filters.css.map */

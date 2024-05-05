@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-
-body {
-  margin: 0;
-}
-
 .lexend {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
@@ -16,6 +11,4 @@ body {
   top: 0;
   z-index: 1;
   padding-bottom: 20px;
-}
-
-/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Home.css.map */
